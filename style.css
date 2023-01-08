@@ -1,0 +1,192 @@
+:root {
+    --background: #000000;
+    --primary: #00ff0f;
+    --popup: #252825;
+}
+
+@font-face {
+    font-family: Jokerman;
+    src: url(assets/JOKERMAN.TTF);
+}
+@font-face {
+    font-family: ITC;
+    src: url(assets/ITCKRIST.TTF);
+}
+
+body {
+	margin: 0px;
+    background-color: var(--background);
+    color: #ffffff;
+    font-family: sans-serif;
+    overflow: hidden !important;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+}
+
+.sys {
+    font-family: Jokerman;
+    font-size: xxx-large;
+    background-color: var(--primary);
+    color: var(--background);
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    float: left;
+    border-bottom-right-radius: 50%;
+}
+
+.sub {
+    font-family: ITC;
+    font-size: xx-large;
+    color: var(--primary);
+    height: 100%;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+.name {
+    float: right;
+    padding-right: 8%;
+}
+
+.body{
+    display: grid;
+    justify-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+    width: 100vw;
+}
+.title.sub {
+    color: #ffffff;
+    font-size: xxx-large;
+}
+.info {
+    color: #888888;
+}
+button.go {
+    font-family: Jokerman;
+    font-size: xxx-large;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3pt solid var(--primary);
+    color: var(--primary);
+    width: 35vw;
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prompt .bord {
+    display: flex;
+    padding-left: 6pt;
+    align-items: center;
+    font-size: large;
+    border-left: 2pt solid lightgreen;
+}
+.group {
+    height: min-content;
+    display: grid;
+    justify-items: center;
+    width: 100vw;
+}
+.prompt .tick{
+    width: 8px;
+    height: 2.2em;
+    margin-right: 2%;
+    background-color: #90ee90;
+    border-radius: 10pt;
+}
+
+.shares {
+    text-align: right;
+    padding-right: 15%;
+    color: #90ee90;
+    font-size: large;
+    width: 100vw;
+    display: none;
+}
+.prompt {
+    background-color: #00ff1165;
+    border-radius: 10pt;
+    padding: 5%; 
+    width: 75vw;
+    color: #ffffff;
+
+    max-height: 2.5em;
+}
+
+#share-svg {
+    width: 60%;
+}
+
+.modal {
+    position: absolute;
+    background-color: #000000ab;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    display: none;
+    align-items: center;
+    justify-items: center;
+    animation: popup 80ms ease-in;
+}
+
+@keyframes popup {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+
+.proceed {
+    background-color: var(--popup);
+    border-radius: 10pt;
+    width: 70vw;
+    height: 25vh;
+    display: grid;
+    justify-items: center;
+    padding-top: 10%;
+}
+.proceed input {
+    background-color: transparent;
+    border: 1pt solid var(--primary);
+    border-radius: 8pt;
+    height: 5vh;
+    min-height: 30px;
+    width: 80%;
+    padding-left: 5%;
+    color: #ffffff;
+}
+.proceed .foot {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+}
+.proceed .share-btn {
+    background-color: var(--primary);
+    border: 0px;
+    border-radius: 20pt;
+    width: 20vw;
+    height: 4.5vh;
+    padding: 7%;
+    padding-left: 8%;
+    padding-right: 8%;
+    /* font-size: medium; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#play-back {
+    display: none;
+}
+
+h1, h4 {
+	margin: 0px;
+	height: min-content;
+	max-height: min-content;
+}

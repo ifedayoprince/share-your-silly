@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- <link rel="stylesheet" href="assets/normalize.css"> -->
+	<link rel="stylesheet" href="style.css" />
+
+	<title>Share Your Silly</title>
+</head>
+
+<body>
+	<header>
+		<a href="/"><div class="sys title">SYS</div></a>
+	</header>
+	<audio></audio>
+	<main class="body">
+		<h1 class="title sub">Share Your Silly</h1>
+		<h4 class="info">Replies become unavailable after 24 hours.</h4>
+		<div class="group">
+			<div class="prompt">
+				<div class="bord">
+					What are your goals for 2023?
+				</div>
+			</div>
+		</div>
+		<button class="go">Go</button>
+		</div>
+		<div class="modal">
+			<div class="proceed">
+				<input type="text" placeholder="Nickname" name="nick">
+				<input type="text" placeholder="Email" name="nick">
+				<div class="foot">
+					<button class="share-btn">Share</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-storage.js"></script>
+	<script>
+		const firebaseConfig = {
+			apiKey: "AIzaSyC__EiUtSxkEyk1Fv0WFCL0QrNfnSkddDY",
+			authDomain: "share-your-silly.firebaseapp.com",
+			projectId: "share-your-silly",
+			storageBucket: "share-your-silly.appspot.com",
+			messagingSenderId: "1087141507524",
+			appId: "1:1087141507524:web:2707428d3e276d17bdb491",
+			measurementId: "G-NJEJCYQ70S"
+		};
+
+		// Initialize Firebase
+		const app = firebase.initializeApp(firebaseConfig);
+		const analytics = firebase.analytics(app); 
+	</script>
+	<script src="index.js"></script>
+</body>
+
+</html>

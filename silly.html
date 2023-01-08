@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- <link rel="stylesheet" href="assets/normalize.css"> -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Share Your Silly</title>
+</head>
+<body>
+  <header>
+   	<a href="/"><div class="sys title">SYS</div></a>
+    <div class="name sub"></div>
+  </header>
+  <audio id="play-back"></audio>
+  <main class="body">
+    <h1 class="title sub">Share Your Silly</h1>
+    <h4 class="info">Replies become unavailable after 24 hours.</h4>
+    <div class="group">
+      <div class="prompt">
+        <a class="promptLink"><div class="bord">What are your goals for 2023?</div></a>
+      </div>
+    </div>
+    <button class="go">
+      <svg width="83px" height="83px" viewBox="0 0 83 83" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path d="M0 0L83 0L83 83L0 83L0 0Z" id="path_1" />
+          <clipPath id="mask_1">
+            <use xlink:href="#path_1" />
+          </clipPath>
+        </defs>
+        <g id="Restart-icon">
+          <path d="M0 0L83 0L83 83L0 83L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd"
+            stroke="none" />
+          <g clip-path="url(#mask_1)">
+            <path
+              d="M6.91667 6.91669L17.0823 17.0823C10.8117 23.3376 6.91667 31.9644 6.91667 41.5C6.91667 60.5693 22.4308 76.0833 41.5 76.0833C60.5692 76.0833 76.0833 60.5693 76.0833 41.5C76.0833 22.4308 60.5692 6.91669 41.5 6.91669L41.5 13.8334C56.7547 13.8334 69.1667 26.2453 69.1667 41.5C69.1667 56.7547 56.7547 69.1667 41.5 69.1667C26.2453 69.1667 13.8333 56.7547 13.8333 41.5C13.8333 33.871 16.9475 26.9656 21.9591 21.9591L31.125 31.125L31.125 6.91669L6.91667 6.91669L6.91667 6.91669Z"
+              id="Shape" fill="#00FF0F" stroke="none" />
+          </g>
+        </g>
+      </svg>
+    </button>
+  </main>
+  <div class="error title sub" style="display: none;">
+    Sorry this silly has expired.
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.0/firebase-storage.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC__EiUtSxkEyk1Fv0WFCL0QrNfnSkddDY",
+      authDomain: "share-your-silly.firebaseapp.com",
+      projectId: "share-your-silly",
+      storageBucket: "share-your-silly.appspot.com",
+      messagingSenderId: "1087141507524",
+      appId: "1:1087141507524:web:2707428d3e276d17bdb491",
+      measurementId: "G-NJEJCYQ70S"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics(app); 
+  </script>
+  <script src="silly.js"></script>
+</body>
+</html>
