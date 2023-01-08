@@ -45,7 +45,7 @@ function parseUrl(url) {
 let mediaRecorder = null;
 function counter() {
   let goBtn = document.querySelector("button");
-  let count = 2;
+  let count = 15;
   let countingFn = null;
 
   goBtn.onclick = () => {
@@ -186,7 +186,7 @@ alert('Begin upload')
       navigator.share({
         title: "I DID THE SYS TREND",
         text: `Hi guys, I tried the SYS trend. \n I answered the question ${document.querySelector(".bord").innerHTML}. #shareyoursillytrend #viral #trending`,
-        url: `https://shareyoursilly.web.app/silly.html?id=${encodeURIComponent(uniqueId)}`,
+        url: `https://shareyoursilly.vercel.app/silly.html?id=${encodeURIComponent(uniqueId)}`,
       }).then(() => {
         console.log("Link shared");
       }).catch((error) => {
